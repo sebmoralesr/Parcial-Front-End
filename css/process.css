@@ -1,29 +1,21 @@
-/* ======================================================= */
-/* ESTILOS PARA LA PÁGINA "OUR PROCESS"                    */
-/* ======================================================= */
 
-/* --- Variables de Color --- */
 :root {
     --process-bg-open: #5BB4E7;
     --process-bg-closed: #f1f3f5;
     --process-border-color: #11111100;
     --process-text-dark: #000000;
     --process-text-light: #000000;
-    --process-highlight: #5BB4E7; /* Reutilizando color del highlight */
+    --process-highlight: #5BB4E7; 
 }
 
-/* --- Estilos del Contenedor Principal --- */
+
 .process-page.container {
-  display: block; /* Anulamos el flex del header.css */
+  display: block; 
   padding-top: 2rem;
   padding-bottom: 4rem;
 }
 
-/* ============================================= */
-/* --- ESTILOS BASE (MOBILE-FIRST) --- */
-/* ============================================= */
 
-/* Encabezado de la página (Título y subtítulo) */
 .page-header {
   margin-bottom: 2.5rem;
 }
@@ -75,19 +67,19 @@
   margin: 0;
   cursor: pointer;
   text-align: left;
-  gap: 1rem; /* Espacio entre número, título e icono */
+  gap: 1rem; 
 }
 
 .accordion-number {
   font-size: 2rem;
   font-weight: 600;
   color: var(--process-text-dark);
-  min-width: 40px; /* Ancho fijo para alineación */
+  min-width: 40px; 
   text-align: center;
 }
 
 .accordion-title {
-  flex-grow: 1; /* El título ocupa el espacio restante */
+  flex-grow: 1; 
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--process-text-dark);
@@ -133,24 +125,23 @@
 }
 
 .accordion-content p {
-  padding: 1rem 1rem 0.5rem 3.5rem; /* Padding para alinear con el título */
+  padding: 1rem 1rem 0.5rem 3.5rem; 
 }
 
-/* --- ESTADO ACTIVO (Cuando está abierto) --- */
 .accordion-item.active {
   background-color: var(--process-bg-open);
-  border-radius: 30px; /* Bordes menos redondeados al abrir */
+  border-radius: 30px; /
 }
 .accordion-item.active .accordion-icon::after {
-  transform: translate(-50%, -50%) rotate(90deg); /* Oculta el palito vertical */
+  transform: translate(-50%, -50%) rotate(90deg); 
 }
 .accordion-item.active .accordion-content {
-  max-height: 200px; /* Altura máxima para la animación */
+  max-height: 200px; 
 }
 
-/* ======================================================= */
-/* --- ESTILOS PARA PANTALLAS GRANDES (DESKTOP) --- */
-/* ======================================================= */
+
+/* ESTILOS PARA PANTALLAS GRANDES (DESKTOP)  */
+
 @media (min-width: 768px) {
   .process-page.container {
     padding-top: 4rem;
