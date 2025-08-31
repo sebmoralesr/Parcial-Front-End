@@ -1,0 +1,136 @@
+
+.about-page.container {
+    display: block;
+  }
+
+  
+  :root {
+      --bg-card: #1e2029;
+      --bg-highlight: #5BB4E7;
+      --text-card-body: #e0e0e0;
+      --text-card-title: #5d9cec;
+      --text-section-title: #333;
+      --text-intro-subtitle: #333;
+      --divider-color: #4a4d5c;
+  }
+
+  
+  .about-page {
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+      width: 100%;
+      /* Añadido para controlar el ancho general del contenido si fuera necesario */
+      max-width: 1200px; 
+      margin-inline: auto; /* Centra el contenido de la página */
+  }
+  
+  .about-page .intro {
+      text-align: left;
+      margin-bottom: 2.5rem;
+  }
+  
+  .about-page .section-title {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: var(--text-section-title);
+      display: inline-block;
+      margin: 0 0 1rem 0;
+  }
+  
+  .about-page .highlight {
+      background-color: var(--bg-highlight);
+      padding: 0.1em 0.3em;
+      border-radius: 10px;
+  }
+  
+  .about-page .intro-subtitle {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--text-intro-subtitle);
+  }
+  
+  .about-cards {
+      background-color: var(--bg-card);
+      border-radius: 16px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-top: 3%;
+  }
+  
+  .about-card {
+      color: var(--text-card-body);
+      text-align: center;
+  }
+  
+  .about-card h3 {
+      color: var(--text-card-title);
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+  }
+  
+  .about-card p {
+      font-size: 1rem;
+      line-height: 1.6;
+  }
+  
+  /* --- ESTILOS PARA PANTALLAS GRANDES (DESKTOP) --- */
+
+  @media (min-width: 992px) {
+
+      .about-page {
+          padding-top: 4rem;
+          padding-bottom: 6rem;
+          max-width: none; 
+          margin-inline: 0;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start; 
+          gap: 2rem; 
+      }
+  
+      .about-page .intro {
+          max-width: 400px; 
+          margin-bottom: 0; 
+      }
+  
+      .about-page .section-title {
+          font-size: 2.8rem;
+      }
+  
+      .about-page .intro-subtitle {
+          font-size: 1.1rem;
+      }
+  
+      .about-cards {
+          
+          flex-grow: 1; 
+          max-width: none; 
+          margin-inline: 0; 
+          padding: 2.5rem;
+          flex-direction: row;
+          gap: 0;
+      }
+  
+      .about-card {
+          flex: 1;
+          padding: 0 1.5rem;
+          text-align: left;
+          position: relative;
+      }
+  
+      .about-card:not(:last-child)::after {
+          content: '';
+          position: absolute;
+          top: 10%;
+          bottom: 10%;
+          right: 0;
+          width: 1px;
+          background-color: var(--divider-color);
+      }
+  
+      .about-card h3 {
+          font-size: 1.3rem;
+      }
+  }

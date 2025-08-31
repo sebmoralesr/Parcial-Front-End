@@ -1,0 +1,106 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: system-ui, sans-serif;
+  }
+  
+  .site-header {
+    border-bottom: 1px solid #e5e7eb;
+    background: #fff;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  /* Logo como imagen */
+  .logo img {
+    max-height: 50px;
+    width: auto;
+    display: block;
+  }
+  
+  /* Por defecto (MOBILE): menú oculto, hamburguesa visible */
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 200px;
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .main-nav a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    padding-bottom: 4px;          /* espacio para la raya */
+    transition: border-color 0.5s ease;
+    border-bottom: 2px solid transparent; /* invisible por defecto */
+  }
+  
+  .main-nav a:hover{
+    border-bottom: 2px solid #000000; /* color de la raya */
+    color: #000000;                   /* opcional: cambia el color del texto */
+  }
+  .nav-toggle {
+    display: block; 
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .sr-only {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  /* Clase que muestra menú al hacer clic (con JS) */
+  .main-nav.open {
+    display: block;
+  }
+  
+  /* A partir de DESKTOP (≥993px) → menú horizontal */
+  @media (min-width: 993px) {
+    .main-nav {
+      display: block;
+      position: static;
+      background: none;
+      border: none;
+      padding: 0;
+      width: auto;
+    }
+  
+    .main-nav ul {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  
+    .nav-toggle {
+      display: none;
+    }
+  }
+  
+  
