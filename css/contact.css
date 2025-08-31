@@ -1,0 +1,169 @@
+
+.contact-page.container {
+    display: block;
+  }
+
+  
+  :root {
+    --contact-card-bg: #f8f9fa;
+    --contact-border-color: #ced4da;
+    --contact-highlight-bg: #5BB4E7;
+    --contact-btn-bg: #1e2029;
+    --contact-radio-active: #5BB4E7;
+  }
+  
+  .contact-page {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+  }
+  
+  .page-header {
+    margin-bottom: 2.5rem;
+  }
+  
+  .page-header .section-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    display: inline-block;
+  }
+  
+  .page-header .highlight {
+    background-color: var(--contact-highlight-bg);
+    padding: 0.1em 0.3em;
+    border-radius: 8px;
+  }
+  
+
+  .contact-card {
+    background-color: var(--contact-card-bg);
+    padding: 2rem 1.5rem;
+    border-radius: 24px;
+  }
+  
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--contact-border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #fff;
+  }
+  
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--contact-radio-active);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+
+  .radio-group {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .radio-option label {
+    margin-bottom: 0;
+    cursor: pointer;
+  }
+
+  input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--contact-border-color);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+  input[type="radio"]:checked {
+    border-color: var(--contact-radio-active);
+  }
+  input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--contact-radio-active);
+    border-radius: 50%;
+  }
+  
+  /* Botón de envío */
+  .submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--contact-btn-bg);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #343a40;
+  }
+  
+  .contact-graphic {
+    display: none;
+  }
+
+  @media (min-width: 992px) {
+    .contact-page {
+      padding-top: 4rem;
+      padding-bottom: 6rem;
+    }
+  
+    .contact-card {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 3rem;
+      padding: 3rem;
+    }
+    
+    .contact-graphic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .contact-graphic img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    .submit-btn {
+      width: auto; 
+      padding: 1rem 2.5rem;
+    }
+  }

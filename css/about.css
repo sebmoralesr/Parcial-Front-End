@@ -1,15 +1,8 @@
-/* ======================================================= */
-/* --- CORRECCIÓN DE LAYOUT --- */
-/* Anulamos el display:flex que viene de la clase .container del header.css */
+
 .about-page.container {
     display: block;
   }
-  /* ======================================================= */
-  
-  
-  /* ======================================================= */
-  /* ESTILOS PARA LA PÁGINA "ABOUT US"                       */
-  /* ======================================================= */
+
   
   :root {
       --bg-card: #1e2029;
@@ -20,10 +13,7 @@
       --text-intro-subtitle: #333;
       --divider-color: #4a4d5c;
   }
-  
-  /* ============================================= */
-  /* --- ESTILOS BASE (MOBILE-FIRST) --- */
-  /* ============================================= */
+
   
   .about-page {
       padding-top: 2rem;
@@ -85,12 +75,10 @@
       line-height: 1.6;
   }
   
-  /* ======================================================= */
   /* --- ESTILOS PARA PANTALLAS GRANDES (DESKTOP) --- */
-  /* ======================================================= */
-  
+
   @media (min-width: 992px) {
-      /* Aquí es donde haremos el cambio clave para la alineación */
+
       .about-page {
           padding-top: 4rem;
           padding-bottom: 6rem;
