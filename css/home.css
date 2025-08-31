@@ -32,7 +32,7 @@
     font-size: 1rem;
     color: #444;
     margin-bottom: 1.5rem;
-    max-width: 35ch;           /* limita ancho para legibilidad */
+    max-width: 35ch;           
     margin-inline: auto;
   }
   
@@ -41,13 +41,13 @@
   /* Robot*/
   .hero-image {
     display: flex;
-    justify-content: center;   /* centra horizontalmente */
-    align-items: center;       /* centra verticalmente si hay altura */
+    justify-content: center;  
+    align-items: center;       
     width: 100%;
   }
   
   .hero-image img {
-    max-width: 80%;   /* por defecto móvil */
+    max-width: 80%;  
     height: auto;
     display: block;
   }
@@ -55,7 +55,7 @@
   /* ClIENTES */
   .clients .container {
     display: flex;
-    flex-wrap: wrap;            /* logos saltan a otra fila si no caben */
+    flex-wrap: wrap;            
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
@@ -63,10 +63,10 @@
   }
   
   .clients img {
-    max-height: 40px;           /* todos a una altura uniforme */
+    max-height: 40px;          
     width: auto;
     object-fit: contain;
-    filter: grayscale(100%);    /* estilo elegante en gris */
+    filter: grayscale(100%);   
     opacity: 0.8;
     transition: all 0.3s ease;
   }
@@ -89,14 +89,14 @@
     }
   
     .hero-image img {
-      max-width: 50%;   /* ajustado para iPad y tablets */
+      max-width: 50%;   
     }
   }
   
   /* Desktop grande */
   @media (min-width: 992px) {
     .home-hero .container {
-      flex-direction: row;       /* ahora es un row: 2 columnas */
+      flex-direction: row;      
       justify-content: space-between;
       align-items: center;
       text-align: left;
@@ -112,7 +112,7 @@
     }
   
     .hero-image img {
-      max-width: 60%;   /* más proporcionado en desktop */
+      max-width: 60%;   
     }
   
     .hero-text h1 {
