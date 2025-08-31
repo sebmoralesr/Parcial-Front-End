@@ -1,0 +1,167 @@
+/* ======================================================= */
+/* ESTILOS PARA EL FOOTER                                  */
+/* ======================================================= */
+
+:root {
+    --footer-bg: #1e2029;
+    --footer-text: #e9ecef;
+    --footer-link-hover: #ffffff;
+    --footer-highlight-bg: #5BB4E7;
+    --footer-divider: #495057;
+  }
+  
+  /* ============================================= */
+  /* --- ESTILOS BASE (MOBILE-FIRST) --- */
+  /* ============================================= */
+  
+  .site-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 3rem 0;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column; /* Apilado en móvil */
+    gap: 2.5rem; /* Espacio entre las secciones */
+  }
+  
+  /* --- LOGO --- */
+  .footer-logo {
+    text-align: center; /* Centrado en móvil */
+  }
+  
+  .footer-logo img {
+    max-height: 40px;
+    width: auto;
+  }
+  
+  /* --- NAVEGACIÓN (About us, Services) --- */
+  .footer-nav {
+    text-align: center; /* Centrado en móvil */
+  }
+  
+  .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Apilado en móvil */
+    gap: 1rem;
+  }
+  
+  .footer-nav a {
+    color: var(--footer-text);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-nav a:hover {
+    color: var(--footer-link-hover);
+    text-decoration: underline;
+  }
+  
+  /* --- CONTACTO --- */
+  .footer-contact {
+    text-align: center; /* Centrado en móvil */
+  }
+  
+  .contact-title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+  
+  .contact-title .highlight {
+    background-color: var(--footer-highlight-bg);
+    color: #111;
+    padding: 0.3em 0.6em;
+    border-radius: 999px;
+  }
+  
+  .contact-details {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    line-height: 1.6;
+  }
+  
+  /* --- COPYRIGHT Y POLÍTICA DE PRIVACIDAD --- */
+  .footer-bottom {
+    border-top: 1px solid var(--footer-divider);
+    padding-top: 1.5rem;
+    margin-top: 1rem; /* Ajuste para espaciado en móvil */
+    display: flex;
+    flex-direction: column; /* Apilado en móvil */
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .copyright {
+    color: #adb5bd;
+  }
+  
+  .privacy-link {
+    color: var(--footer-text);
+    text-decoration: underline;
+  }
+  
+  .privacy-link:hover {
+    color: var(--footer-link-hover);
+  }
+  
+  /* ======================================================= */
+  /* --- ESTILOS PARA DESKTOP --- */
+  /* ======================================================= */
+  
+  @media (min-width: 992px) {
+    .site-footer {
+      padding: 4rem 0;
+    }
+    
+    .footer-container {
+      display: grid;
+      /* Define 3 columnas: una estrecha para el logo, dos más anchas para nav y contacto */
+      grid-template-columns: 0.8fr 1.2fr 1.8fr; /* Ajusta estos valores si las columnas no tienen el ancho deseado */
+      align-items: flex-start; /* Alinea los elementos al inicio de cada celda */
+      gap: 2rem; /* Espacio entre las columnas */
+    }
+  
+    /* Reinicia el layout de los elementos individuales para desktop */
+    .footer-logo {
+      text-align: left;
+      grid-column: 1 / 2; /* El logo ocupa la primera columna */
+    }
+  
+    .footer-nav {
+      text-align: left;
+      grid-column: 2 / 3; /* La navegación ocupa la segunda columna */
+    }
+    .footer-nav ul {
+      flex-direction: row; /* La navegación se vuelve horizontal */
+      gap: 2rem;
+    }
+  
+    .footer-contact {
+      text-align: left;
+      grid-column: 3 / 4; /* El contacto ocupa la tercera columna */
+    }
+  
+    /* La parte inferior se extiende a lo largo de todas las columnas */
+    .footer-bottom {
+      grid-column: 1 / -1; /* Ocupa desde la primera hasta la última columna */
+      flex-direction: row; /* Copyright a la izquierda, Privacy a la derecha */
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      margin-top: 3rem; /* Más espacio entre el contenido superior y el inferior */
+    }
+  }
