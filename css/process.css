@@ -1,0 +1,177 @@
+/* ======================================================= */
+/* ESTILOS PARA LA PÁGINA "OUR PROCESS"                    */
+/* ======================================================= */
+
+/* --- Variables de Color --- */
+:root {
+    --process-bg-open: #5BB4E7;
+    --process-bg-closed: #f1f3f5;
+    --process-border-color: #11111100;
+    --process-text-dark: #000000;
+    --process-text-light: #000000;
+    --process-highlight: #5BB4E7; /* Reutilizando color del highlight */
+}
+
+/* --- Estilos del Contenedor Principal --- */
+.process-page.container {
+  display: block; /* Anulamos el flex del header.css */
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+}
+
+/* ============================================= */
+/* --- ESTILOS BASE (MOBILE-FIRST) --- */
+/* ============================================= */
+
+/* Encabezado de la página (Título y subtítulo) */
+.page-header {
+  margin-bottom: 2.5rem;
+}
+
+.page-header  {
+  font-size: 2.2rem;
+  font-weight: 600;
+  display: inline-block;
+  margin: 0 0 1rem 0;
+}
+
+.page-header .highlight {
+  background-color: var(--process-highlight);
+  padding: 0.1em 0.3em;
+  border-radius: 8px;
+}
+
+.page-header {
+  font-size: 1rem;
+  color: var(--process-text-light);
+  line-height: 1.5;
+}
+
+/* Contenedor del Acordeón */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+/* Cada item del acordeón */
+.accordion-item {
+  background-color: var(--process-bg-closed);
+  border: 1px solid var(--process-border-color);
+  border-radius: 15px; /* Bordes totalmente redondeados */
+  padding: 0.75rem 1rem;
+  transition: background-color 0.4s ease, border-radius 0.4s ease;
+}
+
+/* Botón que abre/cierra */
+.accordion-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;
+  gap: 1rem; /* Espacio entre número, título e icono */
+}
+
+.accordion-number {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--process-text-dark);
+  min-width: 40px; /* Ancho fijo para alineación */
+  text-align: center;
+}
+
+.accordion-title {
+  flex-grow: 1; /* El título ocupa el espacio restante */
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--process-text-dark);
+}
+
+/* Icono de +/- */
+.accordion-icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--process-text-dark);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.accordion-icon::before,
+.accordion-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: var(--process-text-dark);
+  transition: transform 0.4s ease;
+}
+.accordion-icon::before {
+  width: 14px;
+  height: 2px;
+  transform: translate(-50%, -50%); /* Centra el palito horizontal */
+}
+.accordion-icon::after {
+  width: 2px;
+  height: 14px;
+  transform: translate(-50%, -50%); /* Centra el palito vertical */
+}
+
+/* Contenido desplegable */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out;
+  color: var(--process-text-dark);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.accordion-content p {
+  padding: 1rem 1rem 0.5rem 3.5rem; /* Padding para alinear con el título */
+}
+
+/* --- ESTADO ACTIVO (Cuando está abierto) --- */
+.accordion-item.active {
+  background-color: var(--process-bg-open);
+  border-radius: 30px; /* Bordes menos redondeados al abrir */
+}
+.accordion-item.active .accordion-icon::after {
+  transform: translate(-50%, -50%) rotate(90deg); /* Oculta el palito vertical */
+}
+.accordion-item.active .accordion-content {
+  max-height: 200px; /* Altura máxima para la animación */
+}
+
+/* ======================================================= */
+/* --- ESTILOS PARA PANTALLAS GRANDES (DESKTOP) --- */
+/* ======================================================= */
+@media (min-width: 768px) {
+  .process-page.container {
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .page-header  {
+    margin-bottom: 0;
+  }
+  .accordion-item {
+    padding: 1rem 1.5rem;
+  }
+  .accordion-title {
+    font-size: 1.25rem;
+  }
+  .accordion-content p {
+    padding-left: 5rem;
+  }
+}
